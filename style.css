@@ -1,0 +1,625 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f3ec;
+    color: #292923;
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    min-height: 70vh;
+    padding: 110px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.section-label {
+    color: #a88b4a;
+    letter-spacing: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 9vw, 70px);
+    line-height: 0.95;
+    font-weight: 500;
+}
+
+.gold-line {
+    width: 60px;
+    height: 1px;
+    background: #c2a45d;
+    margin: 32px auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background-image: url("images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 24, 20, 0.42),
+            rgba(20, 24, 20, 0.75)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+
+    animation: heroAppear 1.8s ease;
+}
+
+.small-title {
+    font-size: 10px;
+    letter-spacing: 6px;
+    margin-bottom: 22px;
+}
+
+.ornament {
+    color: #d9bd79;
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(58px, 13vw, 105px);
+
+    font-weight: 500;
+    line-height: 0.75;
+}
+
+.hero h1 span {
+    display: block;
+
+    font-size: 35px;
+
+    color: #d9bd79;
+
+    margin: 22px 0;
+}
+
+.event-title {
+    letter-spacing: 8px;
+    font-size: 13px;
+}
+
+.welcome {
+    margin-top: 35px;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.scroll-btn {
+    display: inline-flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 45px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.scroll-btn span {
+    font-size: 22px;
+
+    animation: arrowMove 1.5s infinite;
+}
+
+.hero-decoration {
+    position: absolute;
+    z-index: 2;
+
+    color: rgba(216, 189, 124, 0.6);
+
+    font-size: 90px;
+}
+
+.decoration-left {
+    left: 30px;
+    top: 50%;
+}
+
+.decoration-right {
+    right: 30px;
+    top: 50%;
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================
+   ШАҚЫРУ МӘТІНІ
+========================= */
+
+.invitation-section {
+    background: #f7f3ec;
+}
+
+.invitation-text {
+    max-width: 720px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.2px;
+
+    color: #4f4b43;
+
+    margin: 12px auto;
+}
+
+.invitation-text strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 600;
+
+    color: #292923;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.date-section {
+    background: #eee9df;
+}
+
+.calendar {
+    width: min(390px, 92vw);
+
+    margin-top: 40px;
+
+    padding: 28px;
+
+    background: #fff;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.weekdays,
+.days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.weekdays {
+    margin-top: 20px;
+
+    color: #a88b4a;
+
+    font-size: 9px;
+}
+
+.days {
+    margin-top: 15px;
+
+    gap: 4px;
+}
+
+.days span {
+    aspect-ratio: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.days span:hover {
+    background: #eee9df;
+
+    transform: scale(1.08);
+}
+
+.date-note {
+    margin-top: 25px;
+
+    color: #999;
+
+    font-size: 11px;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   TIME
+========================= */
+
+.clock {
+    display: flex;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.clock > div {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 100px;
+}
+
+.clock-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 65px;
+}
+
+.clock-label {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #999;
+}
+
+.clock-divider {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #bda364;
+
+    font-size: 50px;
+
+    margin: 0 8px;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location-section {
+    min-height: 65vh;
+
+    background: #292923;
+
+    color: white;
+}
+
+.location-section .section-label {
+    color: #d8bd7c;
+}
+
+.location-icon {
+    color: #d8bd7c;
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+.location-text {
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    margin-top: 20px;
+}
+
+.map-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 30px;
+
+    border: 1px solid #d8bd7c;
+
+    color: #d8bd7c;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background: #d8bd7c;
+
+    color: #292923;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   ДӘУЛЕТ & АЙМАН
+========================= */
+
+.hosts-section {
+    min-height: 80vh;
+
+    background: #f7f3ec;
+}
+
+.hosts-ornament {
+    color: #bda364;
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+}
+
+.hosts-section h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(60px, 13vw, 95px);
+
+    line-height: 0.8;
+
+    font-weight: 500;
+}
+
+.hosts-section h2 span {
+    display: block;
+
+    font-size: 35px;
+
+    color: #bda364;
+
+    margin: 20px 0;
+}
+
+.hosts-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #4f4b43;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn {
+    position: fixed;
+
+    z-index: 100;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d8bd7c;
+
+    background: rgba(35, 35, 30, 0.92);
+
+    color: #d8bd7c;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.08);
+}
+
+.music-btn.playing {
+    animation: musicPulse 1.5s infinite;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    background: #20201d;
+
+    color: #777;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+footer span {
+    color: #bda364;
+
+    margin: 0 8px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrowMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+@keyframes musicPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0
+            rgba(216, 189, 124, 0.4);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 13px
+            rgba(216, 189, 124, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(216, 189, 124, 0);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 85px 20px;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .calendar {
+        padding: 20px;
+    }
+
+    .clock-number {
+        font-size: 52px;
+    }
+
+    .clock > div {
+        min-width: 80px;
+    }
+
+    .hosts-section h2 {
+        font-size: 70px;
+    }
+
+    .invitation-text {
+        font-size: 19px;
+
+        line-height: 1.75;
+
+        padding: 0 5px;
+    }
+
+    .hosts-text {
+        font-size: 18px;
+    }
+}
