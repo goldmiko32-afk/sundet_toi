@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Батырхан & Нұрхан — Сүндет той</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn">
+        <span id="musicIcon">♫</span>
+    </button>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-decoration decoration-left">❧</div>
+        <div class="hero-decoration decoration-right">❧</div>
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                АҚ ДАСТАРХАНҒА ШАҚЫРУ
+            </p>
+
+            <div class="ornament">✦</div>
+
+            <h1>
+                Батырхан
+                <span>&</span>
+                Нұрхан
+            </h1>
+
+            <div class="gold-line"></div>
+
+            <p class="event-title">
+                СҮНДЕТ ТОЙ
+            </p>
+
+            <p class="welcome">
+                Құрметті ағайын-туыс,<br>
+                дос-жаран!
+            </p>
+
+            <a href="#invitation" class="scroll-btn">
+                Шақыруды ашу
+                <span>↓</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main id="invitation">
+
+
+        <!-- ШАҚЫРУ -->
+
+        <section class="section invitation-section">
+
+            <p class="section-label">
+                ҚҰРМЕТТІ ҚОНАҚТАР
+            </p>
+
+            <h2>
+                Қуанышымызға<br>
+                ортақ болыңыздар!
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="invitation-text">
+                Ардақты ағайын-туыс, құда-жекжат,
+                дос-жарандар!
+            </p>
+
+            <p class="invitation-text">
+                Сіздерді аяулы балаларымыз
+                <strong>Батырхан мен Нұрханның</strong>
+                сүндет тойына арналған
+                ақ дастарханымыздың қадірлі қонағы
+                болуға шақырамыз!
+            </p>
+
+            <p class="invitation-text">
+                Ақ ниетпен жайылған дастарханымыздың
+                төрінен орын алып, қуанышымызды
+                бірге бөлісуге шақырамыз.
+            </p>
+
+        </section>
+
+
+        <!-- КҮНТІЗБЕ -->
+
+        <section class="section date-section">
+
+            <p class="section-label">
+                ТОЙ КҮНІ
+            </p>
+
+            <h2>
+                Қараша
+            </h2>
+
+            <div class="calendar">
+
+                <div class="calendar-header">
+                    <span>ҚАРАША</span>
+                    <span>2026</span>
+                </div>
+
+                <div class="weekdays">
+                    <span>Дс</span>
+                    <span>Сс</span>
+                    <span>Ср</span>
+                    <span>Бс</span>
+                    <span>Жм</span>
+                    <span>Сб</span>
+                    <span>Жс</span>
+                </div>
+
+                <div class="days" id="calendarDays"></div>
+
+            </div>
+
+            <p class="date-note">
+                28 қараша 2026 жыл
+            </p>
+
+        </section>
+
+
+        <!-- УАҚЫТ -->
+
+        <section class="section time-section">
+
+            <p class="section-label">
+                БАСТАЛУ УАҚЫТЫ
+            </p>
+
+            <div class="clock">
+
+                <div>
+                    <span class="clock-number">--</span>
+                    <span class="clock-label">САҒАТ</span>
+                </div>
+
+                <span class="clock-divider">:</span>
+
+                <div>
+                    <span class="clock-number">--</span>
+                    <span class="clock-label">МИНУТ</span>
+                </div>
+
+            </div>
+
+            <p class="date-note">
+                Уақыты қосымша хабарланады
+            </p>
+
+        </section>
+
+
+        <!-- МЕКЕНЖАЙ -->
+
+        <section class="section location-section">
+
+            <p class="section-label">
+                МЕКЕНЖАЙЫ
+            </p>
+
+            <div class="location-icon">
+                ⌖
+            </div>
+
+            <h2>
+                «Ынтымақ»<br>
+                тойханасы
+            </h2>
+
+            <p class="location-text">
+                Шымкент қаласы<br>
+                Жиделибайсын көшесі, 75
+            </p>
+
+            <a
+                class="map-btn"
+                href="https://2gis.kz/shymkent/search/%D1%8B%D0%BD%D1%82%D1%8B%D0%BC%D0%B0%D0%BA%20%D1%82%D0%BE%D0%B9%D1%85%D0%B0%D0%BD%D0%B0%20/firm/70000001028592085/69.525177%2C42.345113?m=69.523103%2C42.344823%2F16.11"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                КАРТАДАН КӨРУ
+            </a>
+
+        </section>
+
+
+        <!-- СОҢҒЫ ЭКРАН -->
+
+        <section class="section hosts-section">
+
+            <p class="section-label">
+                ТОЙ БЕРУШІЛЕР
+            </p>
+
+            <div class="hosts-ornament">
+                ✦
+            </div>
+
+            <h2>
+                Дәулет
+                <span>&</span>
+                Айман
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="hosts-text">
+                Құрметпен,<br>
+                Дәулет & Айман
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Батырхан & Нұрхан
+        <span>•</span>
+        Сүндет той
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
